@@ -3,7 +3,9 @@ def fight(army, even, odd):
         soldier = "{0:b}".format(soldier)
         even_counter = 0
         odd_counter = 0
-        if int(soldier) % 2 == 1:
+        if int(soldier) == 0:
+            pass
+        elif int(soldier) % 2 == 1:
             for a in soldier:
                 if a == "1":
                     odd_counter += 1
@@ -36,9 +38,9 @@ def result(even, odd):
         print("tie")
 
 
-battle = [23, -3]
 even_stats = []
 odd_stats = []
+battle = [0, 0, 1, -2, 2, -1, 0, 8, 7]
 
 fight(battle, even_stats, odd_stats)
 result(even_stats, odd_stats)
